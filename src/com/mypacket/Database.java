@@ -5,9 +5,9 @@ import com.sun.jdi.connect.Connector;
 import java.sql.*;
 
 public class Database {
-    private String user = "user";
-    private String pass = "#1#2#3%1%2%3";
-    private String url = "jdbc:mysql://localhost:3306/booklibrarysystem?useSSL=false&serverTimezone=UTC";
+    private String user = "sonphi";
+    private String pass = "pqts0710";
+    private String url = "jdbc:mysql://localhost/BookLibrarySystem";
     private Statement statement;
 
     public Database(){

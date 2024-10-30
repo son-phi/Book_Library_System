@@ -9,9 +9,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Login {
-    public Login (Database database, Scanner sc){
-        System.out.println("Enter Email: ");
+public class Main {
+    public static void main(String[] args) {
+        Database database = new Database();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Welcome to BOOK LIBRARY SYSTEM");
+        System.out.println("Enter Email: \n(-1) to create new account");
         String email = sc.next();
         System.out.println("Enter Password: ");
         String password = sc.next();
@@ -61,5 +65,9 @@ public class Login {
                 user.showList(database,sc);
             }
         }
+    }
+
+    public Main(Database database, Scanner sc){
+
     }
 }

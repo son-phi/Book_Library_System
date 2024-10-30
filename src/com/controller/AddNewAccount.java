@@ -42,7 +42,7 @@ public class AddNewAccount implements Operation {
             ResultSet rs = database.getStatement().executeQuery("SELECT COUNT(*);");
             rs.next();
             int id = rs.getInt("COUNT(*)") + 1;
-            database.getStatement().executeUpdate("INSERT INTO `user` (`ID`, `FirstName`, `LastName`, `Email`, `PhoneNumber`, `Address`, `Password`, `Type`) VALUES ('" + id + "', '" + firstName + "', '" + lastName + "', '" + email + "', '" + phoneNumber + "', '" + address + "', '" + password + "', '" + accType + "');");
+            database.getStatement().executeUpdate("INSERT INTO `Users` (`ID`, `FirstName`, `LastName`, `Email`, `PhoneNumber`, `Address`, `Password`, `Type`) VALUES ('" + id + "', '" + firstName + "', '" + lastName + "', '" + email + "', '" + phoneNumber + "', '" + address + "', '" + password + "', '" + accType + "');");
             System.out.println("New Account Added Successfully.");
         } catch (SQLException e) {
             e.printStackTrace();
